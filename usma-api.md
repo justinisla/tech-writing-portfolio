@@ -1,4 +1,6 @@
 # Alarms
+- [Get alarms](#get-alarms)
+- [Get alarm details](#get-alarm-details)
 ## Get alarms
 `GET /alarms` \
 Get a page of alarms.
@@ -147,6 +149,8 @@ curl -X GET "https://your-subdomain.alienvault.cloud/api/2.0/alarms/1036671a-764
 
 
 # Events
+- [Get events](#get-events)
+- [Get event details](#get-event-details)
 ## Get events
 `GET /events` \
 Get a page of events.
