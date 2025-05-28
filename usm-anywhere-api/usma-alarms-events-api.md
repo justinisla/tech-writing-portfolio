@@ -1,9 +1,9 @@
 ---
-title: USMA Alarms & Events API
+title: USM Anywhere APIs
 layout: default
 ---
 
-# USMA Alarms & Events API
+# USM Anywhere APIs
 
 ## Alarms
 - [Get alarms](#get-alarms)
