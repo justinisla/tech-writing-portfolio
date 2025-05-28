@@ -1,3 +1,8 @@
+---
+title: Setting up IntelliJ for Go Development
+layout: default
+---
+
 # Setting up IntelliJ for Go development
 [Prerequisites](#prerequisites) \
 [Installing the Go plugin for IntelliJ](#installing-the-go-plugin-for-intellij) \

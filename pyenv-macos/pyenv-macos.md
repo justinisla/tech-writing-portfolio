@@ -1,3 +1,8 @@
+---
+title: Managing multiple Python versions on macOS with pyenv
+layout: default
+---
+
 # Managing multiple Python versions on macOS with pyenv
 
 If you’ve ever worked on multiple Python projects at the same time, you’ve likely run into the challenge of switching between Python versions. Thankfully, a tool called pyenv makes managing multiple Python versions a breeze. This tutorial will walk you through setting up pyenv to manage multiple Python versions on macOS.

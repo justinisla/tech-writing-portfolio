@@ -1,11 +1,18 @@
-# Alarms
+---
+title: USMA Alarms & Events API
+layout: default
+---
+
+# USMA Alarms & Events API
+
+## Alarms
 - [Get alarms](#get-alarms)
 - [Get alarm details](#get-alarm-details)
-## Get alarms
+### Get alarms
 `GET /alarms` \
 Get a page of alarms.
 
-### Parameters
+#### Parameters
 | Parameter                | Type    | Required | Description                                                                 | Example                                |
 | ------------------------ | ------- | -------- | --------------------------------------------------------------------------- | -------------------------------------- |
 | `page`                   | integer | No       | The number of results to return (zero-based).                               | `2`                                    |
@@ -21,19 +28,19 @@ Get a page of alarms.
 | `timestamp_occurred_gte` | string  | No       | Returns alarms that occurred on or after the specified timestamp.           | `1737990884154`                        |
 | `timestamp_occurred_lte` | string  | No       | Returns alarms that occurred on or before the specified timestamp.          | `1748358884320`                        |
 
-### Response Codes
+#### Response Codes
 * **200 OK**: The request succeeded and a list of alarms is returned.
 * **400 Bad Request**: The request was malformed or included invalid query parameters.
 * **401 Unauthorized**: Authentication failed. The bearer token is missing or invalid.
 * **500 Internal Server Error**: Something went wrong on the server.
 
-### Example
-#### Request
+#### Example
+##### Request
 ```
 curl -X GET "https://your-subdomain.alienvault.cloud/api/2.0/alarms?page=1&size=50&sort=timestamp_occurred,asc&status=open&suppressed=true&rule_intent=Environmental Awareness&rule_method=AWS EC2 Security Group Modified&rule_strategy=Network Access Control Modification&priority_label=medium&alarm_sensor_sources=308ba880-2518-44bb-9ada-07b158d11713&timestamp_occurred_gte=1517933139670&timestamp_occurred_lte=1517933149670" \
 	-H "Authorization: Bearer string"
 ```
-#### Response Body
+##### Response Body
 ```
 {
     "_links": {
@@ -84,29 +91,29 @@ curl -X GET "https://your-subdomain.alienvault.cloud/api/2.0/alarms?page=1&size=
 }
 ```
 
-## Get alarm details
+### Get alarm details
 `GET /alarms/{alarm_id}` \
 Get the details of an alarm.
 
-### Parameters
+#### Parameters
 | Parameter  | Type   | Required | Description          | Example                                |
 | ---------- | ------ | -------- | -------------------- | -------------------------------------- |
 | `alarm_id` | string | Yes      | The ID of the alarm. | `1036671a-764d-485c-a100-ec8ab695e9c8` |
 
-### Response Codes
+#### Response Codes
 * **200 OK**: The request succeeded and an alarm is returned.
 * **400 Bad Request**: The request was malformed or included invalid query parameters.
 * **401 Unauthorized**: Authentication failed. The bearer token is missing or invalid.
 * **404 Not Found**: The alarm was not found.
 * **500 Internal Server Error**: Something went wrong on the server.
 
-### Example
-#### Request
+#### Example
+##### Request
 ```
 curl -X GET "https://your-subdomain.alienvault.cloud/api/2.0/alarms/1036671a-764d-485c-a100-ec8ab695e9c8" \
 	-H "Authorization: Bearer string"
 ```
-#### Response Body
+##### Response Body
 ```
 {
   "uuid": "1036671a-764d-485c-a100-ec8ab695e9c8",
@@ -148,14 +155,14 @@ curl -X GET "https://your-subdomain.alienvault.cloud/api/2.0/alarms/1036671a-764
 ```
 
 
-# Events
+## Events
 - [Get events](#get-events)
 - [Get event details](#get-event-details)
-## Get events
+### Get events
 `GET /events` \
 Get a page of events.
 
-### Parameters
+#### Parameters
 | Parameter                | Type    | Required | Description                                                                 | Example                                |
 | ------------------------ | ------- | -------- | --------------------------------------------------------------------------- | -------------------------------------- |
 | `page`                   | integer | No       | The number of results to return (zero-based).                               | `2`                                    |
@@ -171,19 +178,19 @@ Get a page of events.
 | `timestamp_occurred_gte` | string  | No       | Returns events that occurred on or after the specified timestamp.           | `1737990884154`                        |
 | `timestamp_occurred_lte` | string  | No       | Returns events that occurred on or before the specified timestamp.          | `1748358884320`                        |
 
-### Response Codes
+#### Response Codes
 * **200 OK**: The request succeeded and a list of events is returned.
 * **400 Bad Request**: The request was malformed or included invalid query parameters.
 * **401 Unauthorized**: Authentication failed. The bearer token is missing or invalid.
 * **500 Internal Server Error**: Something went wrong on the server.
 
-### Example
-#### Request
+#### Example
+##### Request
 ```
 curl -X GET "https://your-subdomain.alienvault.cloud/api/2.0/events?page=1&size=50&sort=timestamp_occured,asc&account_name=account&suppressed=true&plugin=plugin&event_name=name&source_name=name&sensor_uuid=308ba880-2518-44bb-9ada-07b158d11713&source_username=user@email.com&timestamp_occured_gte=1517933139670&timestamp_occured_lte=1517933149670" \
 	-H "Authorization: Bearer string"
 ```
-#### Response Body
+##### Response Body
 ```
 {
   "_links": {
@@ -232,29 +239,29 @@ curl -X GET "https://your-subdomain.alienvault.cloud/api/2.0/events?page=1&size=
 }
 ```
 
-## Get event details
+### Get event details
 `GET /event/{event_id}` \
 Get the details of an event
 
-### Parameters
+#### Parameters
 | Parameter  | Type   | Required | Description          | Example                                |
 | ---------- | ------ | -------- | -------------------- | -------------------------------------- |
 | `event_id` | string | Yes      | The ID of the event. | `1036671a-764d-485c-a100-ec8ab695e9c8` |
 
-### Response Codes
+#### Response Codes
 * **200 OK**: The request succeeded and an event is returned.
 * **400 Bad Request**: The request was malformed or included invalid query parameters.
 * **401 Unauthorized**: Authentication failed. The bearer token is missing or invalid.
 * **404 Not Found**: The event was not found.
 * **500 Internal Server Error**: Something went wrong on the server.
 
-### Example
-#### Request
+#### Example
+##### Request
 ```
 curl -X GET "https://your-subdomain.alienvault.cloud/api/2.0/events/{eventId}" \
 	-H "Authorization: Bearer string"
 ```
-#### Response Body
+##### Response Body
 ```
 {
   "id": "39a6918f-33f2-ec9b-0fcc-42bb90f10a1f",
