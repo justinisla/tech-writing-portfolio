@@ -2,6 +2,8 @@
 title: Justin Isla - Technical Writing Portfolio
 ---
 
+# Justin Isla - Technical Writing Portfolio
+
 ## About Me
 
 Hi, I'm Justin! I have over five years of experience in software development and technical writing, having worked with leading companies such as AT&T Cybersecurity and Capital One. I've created comprehensive documentation for internal APIs, development workflows, and incident response procedures. I have a strong passion for clear, accessible communication. Below are some samples of my work.
