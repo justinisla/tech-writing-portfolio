@@ -1,8 +1,3 @@
----
-title: USM Anywhere APIs
-layout: default
----
-
 # USM Anywhere APIs
 
 This document describes the Alarms and Events APIs, which allow you to query and filter alarms and events data within the USM Anywhere platform.
