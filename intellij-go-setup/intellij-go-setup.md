@@ -1,8 +1,3 @@
----
-title: Setting up IntelliJ for Go Development
-layout: default
----
-
 # Setting up IntelliJ for Go Development
 
 [Prerequisites](#prerequisites) \

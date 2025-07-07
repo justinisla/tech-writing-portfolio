@@ -1,7 +1,3 @@
----
-title: Justin Isla - Technical Writing Portfolio
----
-
 # Justin Isla - Technical Writing Portfolio
 
 ## About Me
